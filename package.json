@@ -96,7 +96,9 @@
     "node": "^18.17.1"
   },
   "devDependencies": {
-    "@types/node": "^20.5.8",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^18.17.13",
     "astro": "^3.0.5",
     "pnpm": "^8.7.1",
     "semantic-release": "^21.1.1",
