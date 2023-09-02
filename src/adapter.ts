@@ -2,10 +2,10 @@ import type { AstroAdapter, AstroConfig, AstroIntegration } from 'astro';
 import { build } from 'esbuild';
 import { relative as relativePath } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { exposeEnv } from '@astrojs/vercel/dist/lib/env';
-import { copyFilesToFunction, getFilesFromFolder, getVercelOutput, removeDir, writeJson } from '@astrojs/vercel/dist/lib/fs';
-import { getRedirects } from '@astrojs/vercel/dist/lib/redirects';
-import { type VercelImageConfig, defaultImageConfig, getImageConfig } from '@astrojs/vercel/dist/image/shared';
+import { getVercelOutput, getFilesFromFolder, copyFilesToFunction, removeDir, writeJson } from './lib/fs';
+import { type VercelImageConfig, getImageConfig, defaultImageConfig } from './lib/image';
+import { exposeEnv } from './lib/env';
+import { getRedirects } from './lib/redirects';
 
 const PACKAGE_NAME = 'astro-vercel-edge-adapter';
 
