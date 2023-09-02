@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v1.0.3...v1.0.4) (2023-09-02)
+
+
+### Bug Fixes
+
+* reverted "files" and "directories" in package.json ([5f0a233](https://github.com/alexvuka1/astro-vercel-edge-adapter/commit/5f0a233c33891f5bf6b80cdab5c11253a37ef31f))
+
 ## [1.0.3](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v1.0.2...v1.0.3) (2023-09-02)
 
 
