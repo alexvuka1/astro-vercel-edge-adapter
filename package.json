@@ -44,6 +44,12 @@
     },
     "./package.json": "./package.json"
   },
+  "directories": {
+    "dist": "./dist"
+  },
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18"
   },
