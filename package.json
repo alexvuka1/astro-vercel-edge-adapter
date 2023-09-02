@@ -1,0 +1,109 @@
+{
+  "name": "astro-vercel-edge-adapter",
+  "description": "Deploy your Astro site to Vercel Edge",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "alexvuka1",
+  "access": "public",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexvuka1/astro-vercel-edge-adapter.git"
+  },
+  "keywords": [
+    "astro",
+    "astro-adapter",
+    "astro-vercel",
+    "astro-vercel-edge",
+    "vercel",
+    "vercel-edge",
+    "edge"
+  ],
+  "bugs": "https://github.com/alexvuka1/astro-vercel-edge-adapter/issues",
+  "homepage": "https://github.com/alexvuka1/astro-vercel-edge-adapter",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/adapter.d.cts",
+        "default": "./dist/adapter.cjs"
+      },
+      "import": {
+        "types": "./dist/adapter.d.ts",
+        "default": "./dist/adapter.mjs"
+      }
+    },
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "edge": [
+        "dist/adapter.d.ts"
+      ]
+    }
+  },
+  "directories": {
+    "dist": "./dist",
+    "src": "./src"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "src/**"
+          ]
+        }
+      ]
+    ]
+  },
+  "changelog": {
+    "repo": "astro-vercel-edge-adapter",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "internal": ":house: Internal",
+      "revert": ":rewind: Revert"
+    },
+    "cacheDir": ".changelog"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@astrojs/internal-helpers": "^0.2.0",
+    "@astrojs/vercel": "*",
+    "esbuild": "^0.19.0",
+    "node": "^18.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.8",
+    "astro": "^3.0.5",
+    "pnpm": "^8.7.1",
+    "semantic-release": "^21.1.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "astro": "^3.0.5"
+  }
+}
