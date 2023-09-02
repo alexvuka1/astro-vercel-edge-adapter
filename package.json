@@ -32,16 +32,18 @@
         "default": "./dist/adapter.mjs"
       }
     },
-    "./dist/*": "./dist/*",
-    "./entrypoint": "./dist/entrypoint.js",
+    "./entrypoint": {
+      "require": {
+        "types": "./dist/entrypoint.d.cts",
+        "default": "./dist/entrypoint.cjs"
+      },
+      "import": {
+        "types": "./dist/entrypoint.d.ts",
+        "default": "./dist/entrypoint.mjs"
+      }
+    },
     "./package.json": "./package.json"
   },
-  "directories": {
-    "dist": "./dist"
-  },
-  "files": [
-    "dist"
-  ],
   "engines": {
     "node": ">=18"
   },
