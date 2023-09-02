@@ -1,1 +1,1 @@
-# astro-vercel-edge
+# astro-vercel-edge-adapter
