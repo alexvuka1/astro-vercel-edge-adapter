@@ -130,3 +130,13 @@ export default defineConfig({
 
 > **Note**
 > When building for the Edge, all the dependencies get bundled in a single file to save space. **No extra file will be bundled**. So, if you _need_ some file inside the function, you have to specify it in `includeFiles`.
+
+## Known issues
+### Use with `auth-astro`
+Currently `auth-astro` explicitly checks for `@astrojs/vercel/edge` to detect edge runtime and generates a different build based on that. You will need to patch it to check for `astro-vercel-edge-adapter` instead to get the build working.
+
+```diff
+// integration.ts
+- const edge = ['@astrojs/vercel/edge', '@astrojs/cloudflare'].includes(
++ const edge = ['astro-vercel-edge-adapter', '@astrojs/cloudflare'].includes(
+```
