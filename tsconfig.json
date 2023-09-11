@@ -1,28 +1,25 @@
 {
     "compilerOptions": {
-        "moduleResolution": "node",
-        "target": "ESNext",
-        "module": "ESNext",
-        "lib": [
-            "ESNext",
-            "DOM"
+        // add Bun type definitions
+        "types": [
+            "bun-types"
         ],
-        "sourceMap": true,
-        "strict": true,
-        "outDir": "dist",
-        "declaration": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "esModuleInterop": true,
-        "allowArbitraryExtensions": true,
+        // enable latest features
+        "lib": [
+            "esnext"
+        ],
+        "module": "esnext",
+        "target": "esnext",
+        // if TS 5.x+
+        "moduleResolution": "bundler",
+        "noEmit": true,
         "allowImportingTsExtensions": true,
-        "verbatimModuleSyntax": true,
-        "emitDeclarationOnly": true,
-    },
-    "include": [
-        "src"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+        "moduleDetection": "force",
+        "allowJs": true, // allow importing `.js` from `.ts`
+        "esModuleInterop": true, // allow default imports for CommonJS modules
+        // best practices
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true
+    }
 }

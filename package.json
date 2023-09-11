@@ -23,24 +23,12 @@
   "homepage": "https://github.com/alexvuka1/astro-vercel-edge-adapter",
   "exports": {
     ".": {
-      "require": {
-        "types": "./dist/adapter.d.cts",
-        "default": "./dist/adapter.cjs"
-      },
-      "import": {
-        "types": "./dist/adapter.d.ts",
-        "default": "./dist/adapter.mjs"
-      }
+      "types": "./dist/adapter.d.ts",
+      "import": "./dist/adapter.js"
     },
     "./entrypoint": {
-      "require": {
-        "types": "./dist/entrypoint.d.cts",
-        "default": "./dist/entrypoint.cjs"
-      },
-      "import": {
-        "types": "./dist/entrypoint.d.ts",
-        "default": "./dist/entrypoint.mjs"
-      }
+      "types": "./dist/entrypoint.d.ts",
+      "import": "./dist/entrypoint.js"
     },
     "./package.json": "./package.json"
   },
@@ -99,7 +87,7 @@
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^18.17.13",
     "astro": "^3.0.7",
-    "pnpm": "^8.7.1",
+    "bun-types": "latest",
     "semantic-release": "^21.1.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"

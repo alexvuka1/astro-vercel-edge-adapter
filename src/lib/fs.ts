@@ -49,7 +49,7 @@ export async function copyFilesToFunction(
     const excludeList = exclude.map(fileURLToPath);
     const fileList = files.map(fileURLToPath).filter((f) => !excludeList.includes(f));
 
-    if (files.length === 0) throw new Error('[@astrojs/vercel] No files found to copy');
+    if (files.length === 0) throw new Error('[astro-vercel-edge-adapter] No files found to copy');
 
     let commonAncestor = nodePath.dirname(fileList[0]);
     for (const file of fileList.slice(1)) {
