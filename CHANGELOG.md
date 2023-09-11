@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v1.0.4...v1.0.5) (2023-09-11)
+
+
+### Bug Fixes
+
+* Include feature map in astro adapter ([2ed96ed](https://github.com/alexvuka1/astro-vercel-edge-adapter/commit/2ed96ed746086fe43f947594cb2ddc811828b106))
+
 ## [1.0.4](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v1.0.3...v1.0.4) (2023-09-02)
 
 
