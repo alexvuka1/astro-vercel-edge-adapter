@@ -1,4 +1,4 @@
-# Vercel Edge adapter for Astro
+# Vercel Edge adapter for Astro <a href="https://www.npmjs.com/package/astro-vercel-edge-adapter"><img alt="npm" src="https://img.shields.io/npm/v/astro-vercel-edge-adapter?label="></a></h1>
 
 A fork of `@astrojs/vercel/edge` created to deploy Astro v3 on Vercel Edge Functions. See [discussion](https://github.com/withastro/roadmap/discussions/631) for why this fork was needed.
 
