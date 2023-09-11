@@ -13,6 +13,16 @@ const getAdapter = (): AstroAdapter => ({
 	name: PACKAGE_NAME,
 	serverEntrypoint: `${PACKAGE_NAME}/entrypoint`,
 	exports: ['default'],
+	supportedAstroFeatures: {
+		hybridOutput: 'stable',
+		serverOutput: 'stable',
+		staticOutput: 'stable',
+		assets: {
+			isSharpCompatible: false,
+			isSquooshCompatible: false,
+			supportKind: 'stable',
+		},
+	}
 });
 
 export interface VercelEdgeConfig {
