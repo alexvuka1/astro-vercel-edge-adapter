@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v1.0.5...v2.0.0) (2023-12-11)
+
+
+### Code Refactoring
+
+* Updated Astro dependency to v4 ([f01f17e](https://github.com/alexvuka1/astro-vercel-edge-adapter/commit/f01f17e6b63fafbf64b45aff0ae40122861b8338))
+
+
+### BREAKING CHANGES
+
+* Astro v3 is going away
+
 ## [1.0.5](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v1.0.4...v1.0.5) (2023-09-11)
 
 
