@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v2.0.0...v2.0.1) (2023-12-12)
+
+
+### Bug Fixes
+
+* switched app.render signature because old one was deprecated ([21c3429](https://github.com/alexvuka1/astro-vercel-edge-adapter/commit/21c342947a67750f2c4fc5be86d75eae116184ab))
+
 # [2.0.0](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v1.0.5...v2.0.0) (2023-12-11)
 
 
