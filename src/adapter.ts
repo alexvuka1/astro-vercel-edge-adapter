@@ -30,6 +30,7 @@ export interface VercelEdgeConfig {
 	analytics?: boolean;
 	imageService?: boolean;
 	imagesConfig?: VercelImageConfig;
+	regions?: 'all' | string | string[];
 }
 
 const vercelEdge = ({
@@ -37,6 +38,7 @@ const vercelEdge = ({
 	analytics,
 	imageService,
 	imagesConfig,
+	regions,
 }: VercelEdgeConfig = {}): AstroIntegration => {
 	let _config: AstroConfig;
 	let buildTempFolder: URL;
@@ -136,6 +138,7 @@ const vercelEdge = ({
 				// https://vercel.com/docs/build-output-api/v3#vercel-primitives/edge-functions/configuration
 				await writeJson(new URL(`./.vc-config.json`, functionFolder), {
 					runtime: 'edge',
+					regions,
 					entrypoint: relativePath(commonAncestor, entryPath),
 				});
 
