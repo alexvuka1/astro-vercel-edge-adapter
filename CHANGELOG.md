@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v2.0.1...v2.1.0) (2024-02-02)
+
+
+### Features
+
+* added regions in config options ([b6150c2](https://github.com/alexvuka1/astro-vercel-edge-adapter/commit/b6150c22dd2c4db88e7e16b8535206e001de78ba))
+
 ## [2.0.1](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v2.0.0...v2.0.1) (2023-12-12)
 
 
