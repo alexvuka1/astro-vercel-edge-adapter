@@ -6,6 +6,7 @@ import { getVercelOutput, getFilesFromFolder, copyFilesToFunction, removeDir, wr
 import { type VercelImageConfig, getImageConfig, defaultImageConfig } from './lib/image';
 import { exposeEnv } from './lib/env';
 import { getRedirects } from './lib/redirects';
+import { VercelWebAnalyticsConfig, getInjectableWebAnalyticsContent } from './lib/web-analytics';
 
 const PACKAGE_NAME = 'astro-vercel-edge-adapter';
 
@@ -26,6 +27,8 @@ const getAdapter = (): AstroAdapter => ({
 });
 
 export interface VercelEdgeConfig {
+	/** Configuration for [Vercel Web Analytics](https://vercel.com/docs/concepts/analytics). */
+	webAnalytics?: VercelWebAnalyticsConfig;
 	includeFiles?: string[];
 	analytics?: boolean;
 	imageService?: boolean;
@@ -34,6 +37,7 @@ export interface VercelEdgeConfig {
 }
 
 const vercelEdge = ({
+	webAnalytics,
 	includeFiles = [],
 	analytics,
 	imageService,
@@ -48,7 +52,15 @@ const vercelEdge = ({
 	return {
 		name: PACKAGE_NAME,
 		hooks: {
-			'astro:config:setup': ({ command, config, updateConfig, injectScript }) => {
+			'astro:config:setup': async ({ command, config, updateConfig, injectScript }) => {
+				if (webAnalytics?.enabled) {
+					injectScript(
+						'head-inline',
+						await getInjectableWebAnalyticsContent({
+							mode: command === 'dev' ? 'development' : 'production',
+						})
+					);
+				}
 				if (command === 'build' && analytics) {
 					injectScript('page', 'import "@astrojs/vercel/analytics"');
 				}
