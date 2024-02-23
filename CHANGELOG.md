@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v2.1.0...v2.2.0) (2024-02-23)
+
+
+### Features
+
+* added webAnalytics ([b4dbc06](https://github.com/alexvuka1/astro-vercel-edge-adapter/commit/b4dbc060e42a418f613a9e82e5b3f2872d96ad26))
+
 # [2.1.0](https://github.com/alexvuka1/astro-vercel-edge-adapter/compare/v2.0.1...v2.1.0) (2024-02-02)
 
 
